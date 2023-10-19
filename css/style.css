@@ -240,7 +240,7 @@ img {
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 24px 40px 16px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -253,6 +253,9 @@ img {
  
 
 .mob-menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   display: flex;
@@ -261,8 +264,6 @@ img {
   border-radius: 50%;
   background-color: transparent;
   margin-left: auto;
-  margin-bottom: 24px;
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -293,7 +294,9 @@ img {
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.mob-menu-link.current{
+  color: #404bbf;
+}
 .mob-menu-link:hover,
 .mob-menu-link:focus {
   color: #404bbf;
@@ -511,6 +514,9 @@ img {
   .features-item {
     width: calc((100% - 24px * 1) / 2);
   }
+  .features-subtitle{
+    text-align: left;
+  }
 }
 @media screen and (min-width: 1158px) {
   .features {
@@ -523,8 +529,10 @@ img {
   .features-subtitle {
     font-size: 20px;
     font-weight: 500;
+    text-align: center;
   }
   .features-item-text {
+    width: 264px;
     font-weight: 400;
   }
   .features-item {
@@ -558,7 +566,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .team-item {
-  max-width: 264px;
+  width: 264px;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -636,11 +644,9 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
-    flex-basis: calc((100% - 24px) / 2);
+  
   }
-  .team-item {
-    width: calc((100% - 24px) / 2);
-  }
+ 
 }
 @media screen and (min-width: 1158px) {
   .team {
@@ -939,9 +945,7 @@ img {
   .footer-text {
     max-width: 264px;
   }
-  .footer-input-cont {
-    margin-right: 0 auto;
-  }
+ 
   .footer-media {
     margin-right: auto;
   }
